@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/yellow_header">
+
+    <!-- প্রফেশনাল হেডার -->
+    <RelativeLayout android:id="@+id/topBar" android:layout_width="match_parent" android:layout_height="70dp" android:paddingHorizontal="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="JavaGoat 🐐" android:textColor="@color/navy_bg" android:textStyle="bold" android:textSize="22sp" android:layout_centerVertical="true"/>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="35dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:background="@drawable/bg_pill" android:backgroundTint="#27ae60" android:paddingHorizontal="15dp" android:gravity="center">
+            <TextView android:id="@+id/tvBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="৳ ৪৪০" android:textColor="#fff" android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- কন্টেন্ট হোল্ডার -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/topBar" android:layout_marginBottom="70dp" android:background="@drawable/bg_pill" android:backgroundTint="@color/navy_bg" style="@null">
+        
+        <!-- ১. হোম পেজ (গেম লিস্ট) -->
+        <ScrollView android:id="@+id/pageHome" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="visible">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="match_parent" android:layout_height="160dp" android:text="🏆 ধামাকা অফার!\n১০০০৳ টুর্নামেন্ট শুরু" android:gravity="center" android:background="@color/red_main" android:textColor="#fff" android:textStyle="bold" android:textSize="22sp" android:layout_marginBottom="25dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="জনপ্রিয় গেম 🎮" android:textColor="#fff" android:textSize="18sp" android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvGames" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ২. ওয়ালেট পেজ (বিকাশ/নগদ উইথড্র) -->
+        <ScrollView android:id="@+id/pageWallet" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="25dp" android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="আপনার ওয়ালেট 👛" android:textColor="@color/text_muted" android:textSize="16sp"/>
+                <TextView android:id="@+id/tvFullBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="৳ ৪৪০.০০" android:textColor="@color/gold_main" android:textSize="40sp" android:textStyle="bold" android:layout_marginBottom="30dp"/>
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="টাকা তুলুন (Withdraw)" android:textColor="#fff" android:textStyle="bold" android:layout_marginBottom="15dp"/>
+                
+                <!-- পেমেন্ট বাটনসমূহ -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="3" android:layout_marginBottom="20dp">
+                    <Button android:id="@+id/btnBkash" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:text="bKash" android:backgroundTint="@color/bkash_pink" android:layout_margin="2dp" android:textSize="10sp"/>
+                    <Button android:id="@+id/btnNagad" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:text="Nagad" android:backgroundTint="@color/nagad_orange" android:layout_margin="2dp" android:textSize="10sp"/>
+                    <Button android:id="@+id/btnRocket" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:text="Rocket" android:backgroundTint="@color/rocket_purple" android:layout_margin="2dp" android:textSize="10sp"/>
+                </LinearLayout>
+
+                <EditText android:id="@+id/etNumber" android:layout_width="match_parent" android:layout_height="55dp" android:hint="নম্বর দিন (Personal)" android:textColorHint="#55ffffff" android:textColor="#fff" android:background="@drawable/bg_input" android:paddingLeft="15dp" android:inputType="phone" android:layout_marginBottom="12dp"/>
+                <EditText android:id="@+id/etAmount" android:layout_width="match_parent" android:layout_height="55dp" android:hint="টাকার পরিমাণ লিখুন" android:textColorHint="#55ffffff" android:textColor="#fff" android:background="@drawable/bg_input" android:paddingLeft="15dp" android:inputType="number" android:layout_marginBottom="20dp"/>
+                
+                <Button android:id="@+id/btnSubmit" android:layout_width="match_parent" android:layout_height="60dp" android:text="উইথড্র রিকোয়েস্ট পাঠান 💸" android:backgroundTint="@color/gold_main" android:textColor="@color/navy_bg" android:textStyle="bold"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- বটম বার -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@+id/bottomNav" android:layout_width="match_parent" android:layout_height="70dp" android:layout_alignParentBottom="true" android:background="@color/navy_bg" app:menu="@menu/bottom_nav_menu" app:itemIconTint="@color/gold_main" app:itemTextColor="#fff"/>
+
+    <!-- গেম ওভারলে -->
+    <FrameLayout android:id="@+id/gameOverlay" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone" android:background="#000">
+        <WebView android:id="@+id/gameWebView" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <Button android:id="@+id/btnClose" android:layout_width="45dp" android:layout_height="45dp" android:text="X" android:layout_gravity="top|right" android:backgroundTint="@color/red_main" android:layout_margin="15dp"/>
+    </FrameLayout>
+</RelativeLayout>

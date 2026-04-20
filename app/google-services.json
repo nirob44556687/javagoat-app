@@ -1,0 +1,15 @@
+{
+  "type": "service_account",
+  "project_id": "mr-esports-2443e",
+  "private_key_id": "default_key_id",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDU8db7...\n-----END PRIVATE KEY-----",
+  "client_email": "firebase-adminsdk@mr-esports-2443e.iam.gserviceaccount.com",
+  "client_id": "101446161408",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk%40mr-esports-2443e.iam.gserviceaccount.com",
+  "database_url": "https://mr-esports-2443e-default-rtdb.firebaseio.com",
+  "mobilesdk_app_id": "1:101446161408:android:3214cd6cc1b0e8e591f4e5",
+  "api_key": "AIzaSyBwjcH4api7ypaumSsA2WbgKI5oQzHdz6o"
+}

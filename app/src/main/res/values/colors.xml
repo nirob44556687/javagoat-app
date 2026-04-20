@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy_bg">#0b0e1e</color>
+    <color name="gold_main">#f5a623</color>
+    <color name="red_main">#E53935</color>
+    <color name="yellow_header">#FFD600</color>
+    <color name="bkash_pink">#D12053</color>
+    <color name="nagad_orange">#F7941D</color>
+    <color name="rocket_purple">#8C3494</color>
+    <color name="card_dark">#1a1f33</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_muted">#888888</color>
+</resources>

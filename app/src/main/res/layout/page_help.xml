@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/help_title"
+            style="@style/TitleText"
+            android:layout_marginBottom="30dp" />
+
+        <!-- FAQ Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_pill"
+            android:backgroundTint="@color/card_dark"
+            android:padding="15dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/faq"
+                style="@style/TitleText"
+                android:layout_marginBottom="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/how_to_play"
+                android:backgroundTint="@color/gold_main"
+                android:textColor="@color/navy_bg"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/how_to_withdraw"
+                android:backgroundTint="@color/gold_main"
+                android:textColor="@color/navy_bg" />
+
+        </LinearLayout>
+
+        <!-- Support Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_pill"
+            android:backgroundTint="@color/card_dark"
+            android:padding="15dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_support"
+                style="@style/TitleText"
+                android:layout_marginBottom="15dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/email_support"
+                android:backgroundTint="@color/bkash_pink"
+                android:textColor="@color/text_white"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/phone_support"
+                android:backgroundTint="@color/nagad_orange"
+                android:textColor="@color/text_white"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/live_chat"
+                android:backgroundTint="@color/rocket_purple"
+                android:textColor="@color/text_white" />
+
+        </LinearLayout>
+
+        <!-- Version Info -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JavaGoat v1.0"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp" />
+
+    </LinearLayout>
+
+</ScrollView>
